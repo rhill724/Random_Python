@@ -55,8 +55,17 @@ for i in range(40000):
 strRoll = str(two) + ',' + str(three) + ',' + str(four) + ',' + str(five) + ',' + str(six) + ',' + str(seven) + ',' + str(eight) \
 + ',' + str(nine) + ',' + str(ten) + ',' + str(eleven) + ',' + str(twelve)
 
-print(strRoll)
-print("2,3,4,5,6,7,8,9,10,11,12")
+strNums = "2,3,4,5,6,7,8,9,10,11,12"
+
+nums = strNums.split(',')
+rolls = strRoll.split(',')
+
+# Same width for all columns
+width = 10
+
+print("".join(f"{n:>{width}}" for n in nums))
+print("".join(f"{r:>{width}}" for r in rolls))
+
 
     
     
